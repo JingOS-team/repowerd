@@ -1,0 +1,3 @@
+usr/share/repowerd/device-configs/config-default.xml usr/share/powerd/device_configs/config-default.xml
+usr/share/repowerd/device-configs/config-mako.xml usr/share/powerd/device_configs/config-MF7510.xml
+usr/share/repowerd/device-configs/config-mako.xml usr/share/powerd/device_configs/config-ud710_2h10u.xml

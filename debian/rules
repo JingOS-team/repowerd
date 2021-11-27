@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DEB_BUILD_OPTIONS=noopt
+export PKG_CONFIG_PATH := $(PKG_CONFIG_PATH):/opt/libhybris/lib/aarch64-linux-gnu/pkgconfig/
+export LD_LIBRARY_PATH := $(LD_LIBRARY_PATH):/opt/libhybris/lib/aarch64-linux-gnu/:/opt/libhybris/lib/aarch64-linux-gnu/libhybris/:/opt/libhybris/lib/aarch64-linux-gnu/libhybris/linker:/opt/libhybris/lib/aarch64-linux-gnu/libhybris-egl
+%:
+	dh $@
+
+override_dh_testroot:
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	    -DREPOWERD_DISABLE_TIME_SENSITIVE_TESTS=ON
+

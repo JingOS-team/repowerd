@@ -1,0 +1,113 @@
+repowerd (2018.04+ubports) xenial; urgency=medium
+
+  * Import to UBports 
+  * Always set brightness before first autobrightness setting
+
+ -- Marius Gripsgard <marius@ubports.com>  Mon, 15 Jan 2018 15:45:57 +0100
+
+repowerd (2017.03+17.04.20170403-0ubuntu1) zesty; urgency=medium
+
+  * 2017.03 release
+    - Fix "Closing the lid does not suspend the device" (LP: #1668596)
+    - Fix "messages are logged on every input event" (LP: #1674736)
+    - Fix brightness issues when turning on the screen on Fairphone 2
+    - Add apport hook
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Mon, 03 Apr 2017 14:19:32 +0000
+
+repowerd (2017.02+17.04.20170221-0ubuntu1) zesty; urgency=medium
+
+  * 2017.02 release
+    - Improve lid handling
+    - Add timerfd based wakeup service for desktop
+    - Support new power settings, exposed through com.canonical.repowerd
+    - Improve handling of critically low power scenarios
+    - Generate random cookies for wakeup requests
+  * 2017.02 release
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Tue, 21 Feb 2017 11:41:12 +0000
+
+repowerd (2016.12+17.04.20161212.1-0ubuntu1) zesty; urgency=medium
+
+  * New 2016.12 release
+    - Support suspending with logind
+    - Implement basic lid handling
+    - Don't change the display power mode when pressing the power
+      button on non-phablet devices.
+    - Various snap-related improvements
+    - Fix "[mako] Alarm doesn't ring when screen locked" (LP: #1588526)
+    - Fix "[mako] Awful life battery since OTA 13" (LP: #1630382)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Mon, 12 Dec 2016 19:02:03 +0000
+
+repowerd (2016.11+17.04.20161124-0ubuntu1) zesty; urgency=medium
+
+  * New 2016.11 release
+    - Support multiple user sessions
+    - Don't interfere with the power state of non-mir sessions
+    - Start repowerd at boot on desktop systems
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Thu, 24 Nov 2016 12:55:52 +0000
+
+repowerd (2016.10+16.10.20161007-0ubuntu1) yakkety; urgency=medium
+
+  * New 2016.10 release
+    - Fix typo in brightness config value (LP: #1618391)
+    - Update repowerd-cli help text
+    - Handle SIGTERM gracefully in repowerd-cli
+    - Wait for the repowerd DBus API to be accessible before marking
+      the upstart job as started (LP: #1623853)
+  * 2016.10 release
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Fri, 07 Oct 2016 11:50:44 +0000
+
+repowerd (2016.08.3+16.10.20160830.1-0ubuntu1) yakkety; urgency=medium
+
+  * New 2016.08.3 release
+    - Fix "Low battery notification turns screen on and never turns
+      it off again." (LP: #1618417)
+    - Fix "lock display when idle timeout not honoured" (LP: #1615001)
+    - Fix "Missing powerd-cli active" (LP: #1618072)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Tue, 30 Aug 2016 16:36:58 +0000
+
+repowerd (2016.08.2+16.10.20160823.1-0ubuntu1) yakkety; urgency=medium
+
+  * New 2016.08.2 release
+    - Fix "Regression: In dark conditions autobrightness does not
+      adapt" (LP: #1613871)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Tue, 23 Aug 2016 14:22:58 +0000
+
+repowerd (2016.08.1+16.10.20160817.1-0ubuntu1) yakkety; urgency=medium
+
+  * New 2016.08.1 release
+    - Fix "Display turns off right after playing back a long video"
+      (LP: #1602739)
+    - Fix "call screen still turns off after rejecting the call on
+      the remote end without answering." (LP: #1613506)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Wed, 17 Aug 2016 17:48:35 +0000
+
+repowerd (2016.08+16.10.20160811-0ubuntu1) yakkety; urgency=medium
+
+  * New 2016.08 release
+    - Fix "suspends during video playback when USB gets unplugged"
+      (LP: #1602933)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Thu, 11 Aug 2016 14:17:03 +0000
+
+repowerd (2016.06+16.10.20160808-0ubuntu1) yakkety; urgency=medium
+
+  * debian/repowerd.service:
+    - Make service dependency on lxc-android-config.service optional
+      ('Wants' instead of 'Requires')
+    - Silently fail if lxc-android-config.service is missing
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Mon, 08 Aug 2016 08:59:28 +0000
+
+repowerd (2016.06+16.10.20160706.1-0ubuntu1) yakkety; urgency=medium
+
+  * Initial release (LP: #1599271)
+
+ -- Alexandros Frantzis <alexandros.frantzis@canonical.com>  Wed, 06 Jul 2016 14:24:10 +0000
